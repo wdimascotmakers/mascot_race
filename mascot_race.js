@@ -15,14 +15,21 @@ var race = function(race_distance, mascot1, mascot2, mascot3 ) {
 	var distanceOne = race_distance;
 	var distanceTwo = race_distance;
 	var distanceThree = race_distance;
-	var distOneLeft = distanceOne - penny.run();
-	var distTwoLeft = distanceTwo - reggie.run();
-	var disThreeLeft =  distanceThree - carl.run();
-	console.log('distOneLeft');
-	console.log('distTwoLeft');
-	console.log('distThreeLeft');
-	if() {
-		
+	
+	while (distanceOne > 0 && distanceTwo > 0 && distanceThree > 0) {
+		distanceOne = distanceOne - mascot1.run();
+		distanceTwo = distanceTwo - mascot2.run();
+		distanceThree =  distanceThree - mascot3.run();
+
+		console.log(distanceOne + " " + "meters left")
+		console.log(distanceTwo + " " + "meters left")
+		console.log(distanceThree + " " + "meters left")	
+
+
+
 	}
 
+
 }
+
+race(20, penny, reggie, carl);

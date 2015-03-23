@@ -22,24 +22,19 @@ var race = function(race_distance, mascot1, mascot2, mascot3 ) {
 		console.log(distanceTwo + " " + "meters left");
 		distanceThree =  distanceThree - mascot3.run();
 		console.log(distanceThree + " " + "meters left");
-
-
-
 	}
-	
-	if (distanceOne <= 0){
-		console.log (mascot1.name + " " + mascot1.food + " wins!")
-	}else if(distanceTwo <= 0){
-		console.log (mascot2.name + " " + mascot2.food + " wins!")
-	}else if(distanceThree <= 0){
-		console.log (mascot3.name + " " + mascot3.food + " wins!")
 
-	}else if((distanceThree && distanceTwo === 0) || (distanceTwo && distanceOne === 0) || (distanceThree && distanceOne === 0) || (distanceThree && distanceOne && distanceTwo === 0)){
-		console.log ("Tie! THERE ARE NO WINNERS.")
-
-
+	if ((distanceThree && distanceTwo === 0) || (distanceTwo && distanceOne === 0) || (distanceThree && distanceOne === 0) || (distanceThree && distanceOne && distanceTwo === 0)) {
+		console.log ("Tie! THERE ARE NO WINNERS.");
+	} else if (distanceOne <= 0){
+		console.log (mascot1.name + " " + mascot1.food + " wins!");
+	} else if(distanceTwo <= 0){
+		console.log (mascot2.name + " " + mascot2.food + " wins!");
+	} else if(distanceThree <= 0){
+		console.log (mascot3.name + " " + mascot3.food + " wins!");
+	} 
 }
-}
+
 var penny = new Mascot("Penny","Prune",3);
 var reggie = new Mascot("Reggie","rice cake",2);
 var carl = new Mascot("Carl","Clamato",4);

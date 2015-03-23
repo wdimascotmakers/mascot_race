@@ -2,9 +2,12 @@ var Mascot = function(name, food item, endurance) {
 	this.name = name;
 	this.food = food;
 	this.endurance = endurance;
-	var run {
-		//add Nat's code here
+	this.run = function(){
+		var dist=Math.floor(Math.random()*this.end)
+		console.log(this.name + " " this.food + " sprinted " + dist + " meters! Go " this.name + " " + this.food + "!")
+		return dist
 	}
+
 }
 
 var penny = new Mascot("Penny","Prune","3");
